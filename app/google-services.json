@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "51194273382",
-    "project_id": "contactiofirestore",
-    "storage_bucket": "contactiofirestore.firebasestorage.app"
+    "project_number": "161087464748",
+    "project_id": "popcorniafirestore",
+    "storage_bucket": "popcorniafirestore.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:51194273382:android:d029d5ca27deed78de97a7",
+        "mobilesdk_app_id": "1:161087464748:android:741e2a9fe2c380b7d97889",
         "android_client_info": {
-          "package_name": "com.ecemm.contactio"
+          "package_name": "com.ecemm.popcornia"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBiefErUsh4fw4eOy8Gsr_evQ34We2nulk"
+          "current_key": "AIzaSyA_xgq-YJbpfP89rpF3q04CLY4TUqyA73o"
         }
       ],
       "services": {
