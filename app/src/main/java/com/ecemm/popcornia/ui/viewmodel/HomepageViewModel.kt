@@ -19,12 +19,10 @@ class HomepageViewModel @Inject constructor (var filmsRepository : FilmsReposito
      //ViewModel ilk çalıştığı anda filmList'i tetikle ve getir
         yukle()
      }
-
      fun yukle(){
            filmList = filmsRepository.yukle() //firestoreda filmList.value yapmıyoruz
      }
 }
-
 /**
  * Her activity veya fragment 1 View Model'e sahiptir.
  * View Modeller fragment & activityleri yönetir

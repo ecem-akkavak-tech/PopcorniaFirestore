@@ -2,15 +2,12 @@ package com.ecemm.popcornia.data.datasource
 import androidx.lifecycle.MutableLiveData
 import com.ecemm.popcornia.data.entity.Films
 import com.google.firebase.firestore.CollectionReference
-
 /**
  *  NOT: dataSource ve repository içindeki fonksiyonlarımız returnlü olmalıdır
  *  CollectionReference sayesinde firestoreda bulunan veritabanı üzerinde eş zamanlı çalışıcaz
  *  collectionKisiler  ->  firestoreda bulunan Kisiler tablosunu temsil ediyor
  *  Coroutine'ler ile çalışmadığımız için MutableLiveData ile ilgili işlemler buradan başlar
- *  addSnapshotListener -> gerçek zamanlı veri okumamızı sağlar
- **/
-
+ *  addSnapshotListener -> gerçek zamanlı veri okumamızı sağlar  **/
 class FilmsDataSource(var collectionFilms : CollectionReference) {
      val filmsList = MutableLiveData<List<Films>>()
 
