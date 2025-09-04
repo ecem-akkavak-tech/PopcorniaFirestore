@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.ecemm.popcornia.R
+import com.ecemm.popcornia.data.entity.Films
 import com.ecemm.popcornia.databinding.FragmentHomepageBinding
 import com.ecemm.popcornia.ui.adapter.FilmsAdapter
 import com.ecemm.popcornia.ui.viewmodel.HomepageViewModel
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,14 +63,9 @@ class HomepageFragment : Fragment() {
         }
 
 
-        /*NOT : HomePageFragment'tan DetailFragment'a veri transferi işlemi -> ADAPTER İÇİNDE (onBindViewHolder() metodunda) */
-
-
-
         /********  TOOLBAR (TITLE & TEXT COLOR) ****/
         binding.toolbarHomepage.title="Films"
         binding.toolbarHomepage.setTitleTextColor(Color.WHITE)
-
 
         return binding.root
     }
@@ -77,12 +75,6 @@ class HomepageFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel:HomepageViewModel by viewModels()
         viewModel = tempViewModel
-    }
-
-    override fun onResume() {
-        //bu metod, yaşam döngüsünde sayfanın göründüğünü algıladığımız metoddur
-        super.onResume()
-        //viewModel.yukle() //firestore kendisi otomatik yapıyor buna gerek yok
     }
 
 }

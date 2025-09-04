@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.ecemm.popcornia.R
 import com.ecemm.popcornia.data.entity.Films
 import com.ecemm.popcornia.databinding.CardDesignBinding
@@ -64,10 +65,11 @@ class FilmsAdapter(var mContext:Context , var filmlerListesi:List<Films>) : Recy
 
         cBinding.filmsObject = film  // todo: xml ve fragmenttaki nesneler eşleştirilir
 
-        // todo:resmi almak için
-        val context = holder.itemView.context
-        val imageId = context.resources.getIdentifier(film.resim, "drawable", context.packageName)
-        cBinding.imageViewFilmImg.setImageResource(imageId)
+        // todo:resmi glide ile almak için
+        var url="http://kasimadalan.pe.hu/filmler_yeni/resimler/${film.resim}"
+        Glide.with(mContext).load(url)
+             .override(500,750)
+             .into(cBinding.imageViewFilmImg)
 
 
 

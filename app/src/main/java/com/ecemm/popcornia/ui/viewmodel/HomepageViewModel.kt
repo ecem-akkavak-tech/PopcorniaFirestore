@@ -4,9 +4,6 @@ import androidx.lifecycle.ViewModel
 import com.ecemm.popcornia.data.entity.Films
 import com.ecemm.popcornia.data.repo.FilmsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -25,7 +22,6 @@ class HomepageViewModel @Inject constructor (var filmsRepository : FilmsReposito
 
      fun yukle(){
            filmList = filmsRepository.yukle() //firestoreda filmList.value yapmıyoruz
-
      }
 }
 

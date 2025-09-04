@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.ecemm.popcornia.R
 import com.ecemm.popcornia.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,10 +29,13 @@ class DetailFragment : Fragment() {
         val film = bundle.film
         binding.filmObject = film /****/
 
-        //image için
+        // todo:resmi glide ile almak için
         val context = requireContext()
-        val imageId = context.resources.getIdentifier(film.resim, "drawable", context.packageName)
-        binding.imageViewFilm.setImageResource(imageId)
+        var url="http://kasimadalan.pe.hu/filmler_yeni/resimler/${film.resim}"
+        Glide.with(context).load(url)
+            .override(700,950)
+            .into(binding.imageViewFilm)
+
 
         /********  TOOLBAR (TITLE & TEXT COLOR) ****/
         binding.toolbarDetailpage.setTitleTextColor(Color.WHITE)

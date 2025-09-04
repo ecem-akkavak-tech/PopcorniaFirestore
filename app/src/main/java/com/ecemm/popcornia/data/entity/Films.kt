@@ -7,5 +7,5 @@ data class Films(
    var id:String="",
    var ad:String="",
    var resim:String="",
-   var fiyat:String=""
+   var fiyat:Int=0
 ) :Serializable {}
