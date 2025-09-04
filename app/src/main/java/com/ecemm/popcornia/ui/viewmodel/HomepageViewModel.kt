@@ -15,7 +15,7 @@ class HomepageViewModel @Inject constructor (var filmsRepository : FilmsReposito
     //dependency injection lazım : var filmsRepository = FilmsRepository()
 
     // Todo: Sayfaya veri aktarma işlemi olduğu için Livedata (içinde Films türünde liste içermeli)kullanıcaz
-    val filmList = MutableLiveData<List<Films>>()
+    var filmList = MutableLiveData<List<Films>>()
 
      init {
      // todo: Uygulamanın ilk açıldığı anda veri getirmesi için init gerekir
@@ -24,9 +24,8 @@ class HomepageViewModel @Inject constructor (var filmsRepository : FilmsReposito
      }
 
      fun yukle(){
-        CoroutineScope(Dispatchers.Main).launch{
-           filmList.value = filmsRepository.yukle()
-        }
+           filmList = filmsRepository.yukle() //firestoreda filmList.value yapmıyoruz
+
      }
 }
 

@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.safeargs) //veri transferi için
     alias(libs.plugins.hilt) // Hilt plugin
     kotlin("kapt") // kapt ekle
+    id("com.google.gms.google-services") version "4.4.3" //firestore için
 }
 
 android {
@@ -63,4 +64,8 @@ dependencies {
     //Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    //firestore için
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+    implementation("com.google.firebase:firebase-firestore")
+    // https://firebase.google.com/docs/android/setup#available-libraries
 }

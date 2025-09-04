@@ -82,7 +82,7 @@ class HomepageFragment : Fragment() {
     override fun onResume() {
         //bu metod, yaşam döngüsünde sayfanın göründüğünü algıladığımız metoddur
         super.onResume()
-        //viewModel.yukle() //böylece anasayfaya döndüğümüz anda veriler tekrar yüklenmiş olacak
+        //viewModel.yukle() //firestore kendisi otomatik yapıyor buna gerek yok
     }
 
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51194273382",
+    "project_id": "contactiofirestore",
+    "storage_bucket": "contactiofirestore.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51194273382:android:d029d5ca27deed78de97a7",
+        "android_client_info": {
+          "package_name": "com.ecemm.contactio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiefErUsh4fw4eOy8Gsr_evQ34We2nulk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
